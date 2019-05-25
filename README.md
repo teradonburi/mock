@@ -1,0 +1,6 @@
+# mock
+
+```
+$ yarn
+$ yarn dev
+```
