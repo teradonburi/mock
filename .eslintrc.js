@@ -2,31 +2,28 @@ module.exports = {
   'parser': 'babel-eslint',
   'env': {
     'browser': true, // ブラウザ
-    'es6': true,
-    'node': true,
+    'es6': true, // ES6
+    'node': true // NodeJS
   },
   // reactプラグイン
-  'extends': ['eslint:recommended', 'plugin:react/recommended'],
+  'extends': [
+    'eslint:recommended',
+  ],
   'parserOptions': {
     'ecmaFeatures': {
       'experimentalObjectRestSpread': true,
-      'jsx': true // JSX文法有効
     },
     'sourceType': 'module'
   },
-  // reactプラグイン使用
+  'settings': { 
+  },
   'plugins': [
-    'react'
   ],
   'globals': {
   },
   'rules': {
-    // インデントルール
-    'indent': [
-      'error',
-      2,
-      { 'SwitchCase': 1 }
-    ],
+    // インデント
+    'indent': ['error', 2],
     // 改行コード
     'linebreak-style': [
       'error',
@@ -99,9 +96,5 @@ module.exports = {
       { 'ignoreRestSiblings': true }
     ],
     'no-console': 'off',
-    // reactのprop-typesチェックをしない
-    'react/prop-types': 'off',
-    // reactのコンポーネント名チェックをしない
-    'react/display-name': 'off'
   }
 }

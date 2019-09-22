@@ -1,13 +1,25 @@
 {
+  "name": "mock",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/teradonburi/mock",
+  "author": "teradonburi <daikiterai@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "dev": "parcel index.html"
+    "dev": "NODE_ENV=dev nodemon --inspect server.js",
+    "build": "rm -rf dist/* && parcel build client/index.html -d dist --no-source-maps",
+    "prod": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-react": "^7.13.0",
-    "parcel": "^1.12.3",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.4.0",
+    "nodemon": "^1.19.2",
+    "parcel-bundler": "^1.12.3",
+    "regenerator-runtime": "^0.13.3"
   }
 }
